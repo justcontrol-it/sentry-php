@@ -27,7 +27,10 @@ class Sanitize implements BeforeSendCallback
 
             $event->setExceptions($this->sanitizeExceptions($event->getExceptions(), $word, $regexps));
             $event->setMessage(self::sanitizeString($event->getMessage(), $regexps));
-            self::sanitizeStacktrace($event->getStacktrace(), $word, $regexps);
+
+            if ($event->getStacktrace()) {
+                self::sanitizeStacktrace($event->getStacktrace(), $word, $regexps);
+            }
         }
 
         return $event;
