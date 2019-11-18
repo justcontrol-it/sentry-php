@@ -1,5 +1,5 @@
 {
-    "name": "sentry/sentry",
+    "name": "jci/sentry",
     "type": "library",
     "description": "A PHP SDK for Sentry (http://sentry.io)",
     "keywords": ["sentry", "log", "logging", "error-monitoring", "error-handler", "crash-reporting", "crash-reports"],
